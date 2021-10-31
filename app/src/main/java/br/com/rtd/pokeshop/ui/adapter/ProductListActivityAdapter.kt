@@ -1,7 +1,10 @@
 package br.com.rtd.pokeshop.ui.adapter
 
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import br.com.rtd.pokeshop.databinding.ProductItemBinding
 import br.com.rtd.pokeshop.extesions.addImagemWithCoil
@@ -11,15 +14,15 @@ import java.util.*
 
 class ProductListActivityAdapter(
     cardList: List<PokemonCard>,
+    private val onClick: (PokemonCard) -> Unit,
 ) :
     RecyclerView.Adapter<ProductListActivityAdapter.ViewHolder>() {
 
 
     private val cardMutableList = cardList.toMutableList()
 
-    class ViewHolder(private val binding: ProductItemBinding) :
+   inner class ViewHolder(private val binding: ProductItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
-
 
         fun setProduct(pokemonCard: PokemonCard) {
 
@@ -32,8 +35,10 @@ class ProductListActivityAdapter(
             name.text = pokemonCard.name
             type.text = pokemonCard.type.toString()
             valor.text = valorF
-
             binding.pokemonCardImage.addImagemWithCoil(pokemonCard.urlImagem)
+            binding.root.setOnClickListener {
+                onClick(pokemonCard)
+            }
 
         }
     }

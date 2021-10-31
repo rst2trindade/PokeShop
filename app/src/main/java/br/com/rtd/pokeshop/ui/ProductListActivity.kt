@@ -9,12 +9,13 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.rtd.pokeshop.R
 import br.com.rtd.pokeshop.dao.PokemonCardDao
 import br.com.rtd.pokeshop.databinding.ActivityProductListBinding
+import br.com.rtd.pokeshop.model.entity.PokemonCard
 import br.com.rtd.pokeshop.ui.adapter.ProductListActivityAdapter
 
 class ProductListActivity : AppCompatActivity() {
 
     private val dao = PokemonCardDao()
-    private val adapter = ProductListActivityAdapter(dao.returnAllCard())
+    private val adapter = ProductListActivityAdapter(dao.returnAllCard(),this::goDescription)
 
     private val binding by lazy {
         ActivityProductListBinding.inflate(layoutInflater)
@@ -41,12 +42,6 @@ class ProductListActivity : AppCompatActivity() {
     private fun configRecyvlerView() {
         val recyclerView = binding.productListRecyclerview
         recyclerView.adapter = adapter
-//        adapter.whenClickItem = {
-//            val intent = Intent(this,DescriptionPokeCard::class.java).apply {
-//                putExtra("KEY_CARD",it)
-//            }
-//            startActivity(intent)
-//        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -72,5 +67,10 @@ class ProductListActivity : AppCompatActivity() {
         val intent = Intent(this, ProductRegisterActivity::class.java)
         startActivity(intent)
     }
-
+    private fun goDescription(pokemonCard: PokemonCard) {
+        val intent = Intent(this, DescriptionPokeCard::class.java).apply {
+            putExtra("KEY_CARD", pokemonCard)
+        }
+        startActivity(intent)
+    }
 }

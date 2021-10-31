@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/card_layout">
+
+        <ImageView
+            android:id="@+id/pokemon_card_image"
+            android:layout_width="0dp"
+            android:layout_height="352dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            tools:srcCompat="@drawable/card_explo2"
+            app:srcCompat="@drawable/product_no_imagem"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/pokemon_card_text_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            tools:text="PikachuVMAX"
+            app:layout_constraintTop_toBottomOf="@+id/pokemon_card_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+            android:id="@+id/pokemon_card_text_tipe"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="PikachuVMAX"
+            app:layout_constraintTop_toBottomOf="@+id/pokemon_card_text_name"
+            app:layout_constraintStart_toStartOf="@id/pokemon_card_text_name"
+            app:layout_constraintEnd_toEndOf="@id/pokemon_card_text_name"/>
+        <TextView
+            android:id="@+id/pokemon_card_text_valor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="PikachuVMAX"
+            app:layout_constraintTop_toBottomOf="@+id/pokemon_card_text_tipe"
+            app:layout_constraintStart_toStartOf="@id/pokemon_card_text_name"
+            app:layout_constraintEnd_toEndOf="@id/pokemon_card_text_name"/>
+        <TextView
+            android:id="@+id/pokemon_card_text_desc"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="PikachuVMAX"
+            app:layout_constraintTop_toBottomOf="@+id/pokemon_card_text_valor"
+            app:layout_constraintStart_toStartOf="@id/pokemon_card_text_name"
+            app:layout_constraintEnd_toEndOf="@id/pokemon_card_text_name"/>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_product_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/pokemon_card_text_desc"
+            app:srcCompat="@drawable/ic_shopping_cart" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

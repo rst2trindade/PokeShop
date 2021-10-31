@@ -2,6 +2,7 @@ package br.com.rtd.pokeshop.model.entity
 
 import android.os.Parcel
 import br.com.rtd.pokeshop.model.enums.CardTypes
+import java.io.Serializable
 import java.math.BigDecimal
 
 data class PokemonCard(
@@ -10,6 +11,4 @@ data class PokemonCard(
     val description: String,
     val type: CardTypes,
     val urlImagem: String? = null
-){
-            
-}
+):Serializable
