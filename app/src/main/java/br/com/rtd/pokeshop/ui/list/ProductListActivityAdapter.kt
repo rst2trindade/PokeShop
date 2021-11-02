@@ -1,10 +1,7 @@
-package br.com.rtd.pokeshop.ui.adapter
+package br.com.rtd.pokeshop.ui.list
 
-import android.util.Log
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import br.com.rtd.pokeshop.databinding.ProductItemBinding
 import br.com.rtd.pokeshop.extesions.addImagemWithCoil

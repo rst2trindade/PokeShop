@@ -1,4 +1,4 @@
-package br.com.rtd.pokeshop.ui
+package br.com.rtd.pokeshop.ui.description
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

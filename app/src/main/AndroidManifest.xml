@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokeShop">
         <activity
-            android:name=".ui.DescriptionPokeCard"
+            android:name=".ui.description.DescriptionPokeCard"
             android:exported="true" />
         <activity
-            android:name=".ui.Splash"
+            android:name=".ui.spash.Splash"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,14 +24,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.ShoppingCartListActivity"
+            android:name=".ui.cart.ShoppingCartListActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.ProductRegisterActivity"
+            android:name=".ui.form.ProductRegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.ProductListActivity"
-            android:exported="true"></activity>
+            android:name=".ui.list.ProductListActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

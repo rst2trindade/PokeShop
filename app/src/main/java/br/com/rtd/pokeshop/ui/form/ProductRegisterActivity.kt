@@ -1,4 +1,4 @@
-package br.com.rtd.pokeshop.ui
+package br.com.rtd.pokeshop.ui.form
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.rtd.pokeshop.R
 import br.com.rtd.pokeshop.dao.PokemonCardDao
 import br.com.rtd.pokeshop.databinding.ActivityProductRegisterBinding
-import br.com.rtd.pokeshop.databinding.AddImagemDialogBinding
 import br.com.rtd.pokeshop.extesions.addImagemWithCoil
 import br.com.rtd.pokeshop.model.entity.PokemonCard
 import br.com.rtd.pokeshop.model.enums.CardTypes

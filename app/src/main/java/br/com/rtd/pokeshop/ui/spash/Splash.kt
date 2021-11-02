@@ -1,12 +1,12 @@
-package br.com.rtd.pokeshop.ui
+package br.com.rtd.pokeshop.ui.spash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import br.com.rtd.pokeshop.databinding.ActivityProductListBinding
 import br.com.rtd.pokeshop.databinding.ActivitySplashBinding
+import br.com.rtd.pokeshop.ui.list.ProductListActivity
 
 class Splash : AppCompatActivity() {
 

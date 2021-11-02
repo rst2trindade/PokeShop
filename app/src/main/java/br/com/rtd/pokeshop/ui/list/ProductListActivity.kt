@@ -1,16 +1,17 @@
-package br.com.rtd.pokeshop.ui
+package br.com.rtd.pokeshop.ui.list
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.rtd.pokeshop.R
 import br.com.rtd.pokeshop.dao.PokemonCardDao
 import br.com.rtd.pokeshop.databinding.ActivityProductListBinding
 import br.com.rtd.pokeshop.model.entity.PokemonCard
-import br.com.rtd.pokeshop.ui.adapter.ProductListActivityAdapter
+import br.com.rtd.pokeshop.ui.cart.ShoppingCartListActivity
+import br.com.rtd.pokeshop.ui.description.DescriptionPokeCard
+import br.com.rtd.pokeshop.ui.form.ProductRegisterActivity
 
 class ProductListActivity : AppCompatActivity() {
 
@@ -28,9 +29,6 @@ class ProductListActivity : AppCompatActivity() {
 
         binding.fabProductList.setOnClickListener {
             goRegisterActivity()
-        }
-        binding.productListRecyclerview.setOnClickListener {
-            Toast.makeText(this,"",Toast.LENGTH_SHORT).show()
         }
     }
 
