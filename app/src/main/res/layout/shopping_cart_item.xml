@@ -10,155 +10,89 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp">
 
         <ImageView
             android:id="@+id/card_imagem_cart"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:scaleType="centerCrop"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/card_item_name_cart"
-            app:layout_constraintHorizontal_bias="0"
+            android:layout_height="352dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.3"
             app:srcCompat="@drawable/card_explo2"
             tools:srcCompat="@drawable/card_explo2" />
 
         <TextView
-            android:id="@+id/card_item_name_cart"
+            android:id="@+id/card_name_cart"
+            android:layout_margin="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:textSize="20sp"
-            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/card_imagem_cart"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/card_imagem_cart"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0"
-            tools:text="@tools:sample/lorem/random" />
+            tools:text="NOME"
+            android:textAlignment="center"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/card_text_presc_unid"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginStart="16dp"-->
-<!--            android:text="Unidade"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toTopOf="@id/card_item_presc"-->
-<!--            app:layout_constraintEnd_toStartOf="@id/card_text_presc_total"-->
-<!--            app:layout_constraintStart_toEndOf="@id/card_imagem_cart"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/card_item_name_cart" />-->
-
-<!--        <TextView-->
-<!--            android:id="@+id/card_text_presc_total"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:text="Preço total"-->
-<!--            android:textSize="20sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toTopOf="@id/card_item_presc_total"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toEndOf="@id/card_text_presc_unid"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/card_item_name_cart" />-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/card_name_cart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
 
 
-<!--        <TextView-->
-<!--            android:id="@+id/card_item_presc"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:ellipsize="end"-->
-<!--            android:maxLines="1"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="@android:color/holo_green_light"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/card_item_presc_total"-->
-<!--            app:layout_constraintStart_toStartOf="@id/card_text_presc_unid"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/card_text_presc_unid"-->
-<!--            tools:text="19.99" />-->
+            <ImageView
+                android:id="@+id/itemCartAdd"
+                android:layout_width="24dp"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_plus"
+                app:layout_constraintEnd_toStartOf="@id/itemCartQuantity"
+                app:layout_constraintTop_toTopOf="@id/itemCartQuantity"
+                app:layout_constraintBottom_toBottomOf="@id/itemCartQuantity"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/card_item_presc_total"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginBottom="16dp"-->
-<!--            android:ellipsize="end"-->
-<!--            android:maxLines="1"-->
-<!--            android:textAlignment="center"-->
-<!--            android:textColor="@android:color/holo_green_light"-->
-<!--            android:textSize="18sp"-->
-<!--            android:textStyle="bold"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toEndOf="@id/card_item_presc"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/card_text_presc_total"-->
-<!--            tools:text="19.99" />-->
+            <TextView
+                android:id="@+id/itemCartQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                tools:text="15"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
-<!--        <TextView-->
-<!--            android:id="@+id/card_number_text"-->
-<!--            android:layout_width="0dp"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="4dp"-->
-<!--            android:text="Itens:"-->
-<!--            android:textSize="25sp"-->
-<!--            android:textAlignment="center"-->
-<!--            app:layout_constraintEnd_toStartOf="@+id/constraintLayout"-->
-<!--            app:layout_constraintStart_toStartOf="@id/card_item_presc"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/card_item_presc"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"/>-->
+            <ImageView
+                android:id="@+id/itemCartMinus"
+                android:layout_width="24dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_minus"
+                app:layout_constraintStart_toEndOf="@id/itemCartQuantity"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
 
-<!--        <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--            android:id="@+id/constraintLayout"-->
-<!--            android:layout_width="100dp"-->
-<!--            android:layout_height="40dp"-->
-<!--            android:layout_marginStart="8dp"-->
-<!--            app:layout_constraintBottom_toBottomOf="parent"-->
-<!--            app:layout_constraintEnd_toEndOf="card_item_presc_total"-->
-<!--            app:layout_constraintStart_toStartOf="@+id/card_item_presc_total"-->
-<!--            app:layout_constraintTop_toBottomOf="@+id/card_item_presc_total">-->
+            <TextView
+                android:id="@+id/itemCartTotalPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/itemCartQuantity"
+                app:layout_constraintHorizontal_bias="1.0"
+                tools:text="valor total: 500"/>
 
-<!--            <ImageView-->
-<!--                android:id="@+id/add_card_ic"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toStartOf="card_number_total"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintWidth_percent="0.3"-->
-<!--                app:srcCompat="@drawable/ic_plus" />-->
-
-<!--            <TextView-->
-<!--                android:id="@+id/total_item_cart"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                android:text="1"-->
-<!--                android:textAlignment="center"-->
-<!--                android:textSize="30sp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toStartOf="@id/remove_card_item"-->
-<!--                app:layout_constraintStart_toEndOf="@id/add_card_ic"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintWidth_percent="0.3" />-->
-
-<!--            <ImageView-->
-<!--                android:id="@+id/remove_card_item"-->
-<!--                android:layout_width="0dp"-->
-<!--                android:layout_height="40dp"-->
-<!--                app:layout_constraintBottom_toBottomOf="parent"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toEndOf="@id/total_item_cart"-->
-<!--                app:layout_constraintTop_toTopOf="parent"-->
-<!--                app:layout_constraintWidth_percent="0.3"-->
-<!--                app:srcCompat="@drawable/ic_minus" />-->
-
-<!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
